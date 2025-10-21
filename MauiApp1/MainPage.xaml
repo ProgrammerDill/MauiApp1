@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <Grid RowDefinitions="100, Auto, 150, 100"
+          ColumnDefinitions=".75*, .25*"
+          Padding="10">
+        <Label Text="DILLON RYSON ANAK DONALD BCS23090004"
+               Grid.ColumnSpan="2"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Padding="10"
+               Style="{StaticResource SubHeadline}"/>
+
+        <Image Source="corgi.jpeg"
+               HeightRequest="350"
+               Aspect="AspectFit"
+               Grid.Row="1"
+               Grid.ColumnSpan="2"
+               SemanticProperties.Description="This is a corgi puppy" />
+
+        <Border BackgroundColor="Wheat"
+                Stroke="Wheat"
+                StrokeShape="RoundRectangle 30"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                HeightRequest="200"
+                WidthRequest="325">
+
+            <Grid RowDefinitions="30, 30, *"
+                  ColumnDefinitions="2*, *, *"
+                  Padding="20">
+                <BoxView Color="Wheat"/>
+                <Label Text="James Bond" Grid.ColumnSpan="2" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
+                <BoxView Color="Wheat" Grid.Column="2"/>
+                <Image Source="symbolmale.png" Grid.Column="2" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Start"/>
+                <BoxView Color="wheat" Grid.Row="1"/>
+                <Label Text="Corgi" TextColor="#3f3f3f" Grid.Row="1"/>
+                <BoxView Color="Wheat" Grid.Row="1" Grid.Column="2"/>
+                <Image Source="clock.png" Grid.Row="1" Grid.Column="1" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Start"/>
+                <Label Text="1 Year Old" TextColor="#3f3f3f" Grid.Row="1" Grid.Column="2" HorizontalOptions="End"/>
+                <BoxView Color="Orange" Grid.Row="2"/>
+                <Image Source="location.png" Grid.Row="2"/>
+
+            </Grid>
+        </Border>
+
+        <Button x:Name="CounterBtn"
+                Text="Adopt Now"
+                Grid.Row="4"
+                HeightRequest="10"
+                WidthRequest="100"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+
+    </Grid>
+
+</ContentPage>
