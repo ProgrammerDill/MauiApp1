@@ -11,14 +11,32 @@
 
         private void OnCounterClicked(object? sender, EventArgs e)
         {
-            count++;
-
             if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+                AdoptBtn.Text = $"Adopted";
             else
-                CounterBtn.Text = $"Clicked {count} times";
+                AdoptBtn.Text = $"Adopted";
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            SemanticScreenReader.Announce(AdoptBtn.Text);
+        }
+
+        private bool isFavourited = false;
+
+        private void OnFavouriteClicked(object? sender, EventArgs e)
+        {
+            if (sender is Button button)
+            {
+                if (isFavourited)
+                {
+                    // Button does not have a BackColor property.
+                    // Use BackgroundColor instead.
+                    button.BackgroundColor = Colors.Transparent;
+                }
+                else
+                {
+                    button.BackgroundColor = Colors.Red;
+                }
+                isFavourited = !isFavourited;
+            }
         }
     }
 }

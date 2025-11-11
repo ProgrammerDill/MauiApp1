@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage">
 
-    <Grid RowDefinitions="100, Auto, 150, 100"
-          ColumnDefinitions=".75*, .25*"
+    <Grid RowDefinitions="100, Auto, 100, 270"
+          ColumnDefinitions=".75*"
           Padding="10">
+
         <Label Text="DILLON RYSON ANAK DONALD BCS23090004"
                Grid.ColumnSpan="2"
                HorizontalOptions="Center"
@@ -25,36 +26,143 @@
                 StrokeShape="RoundRectangle 30"
                 Grid.Row="2"
                 Grid.ColumnSpan="2"
-                HeightRequest="200"
+                HeightRequest="150"
                 WidthRequest="325">
 
-            <Grid RowDefinitions="30, 30, *"
-                  ColumnDefinitions="2*, *, *"
+            <Grid RowDefinitions="30, 30, 50"
+                  ColumnDefinitions="30, *, *, 70"
                   Padding="20">
-                <BoxView Color="Wheat"/>
-                <Label Text="James Bond" Grid.ColumnSpan="2" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start"/>
-                <BoxView Color="Wheat" Grid.Column="2"/>
-                <Image Source="symbolmale.png" Grid.Column="2" HeightRequest="30" HorizontalOptions="End" VerticalOptions="Start"/>
-                <BoxView Color="wheat" Grid.Row="1"/>
-                <Label Text="Corgi" TextColor="#3f3f3f" Grid.Row="1"/>
-                <BoxView Color="Wheat" Grid.Row="1" Grid.Column="2"/>
-                <Image Source="clock.png" Grid.Row="1" Grid.Column="1" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Start"/>
-                <Label Text="1 Year Old" TextColor="#3f3f3f" Grid.Row="1" Grid.Column="2" HorizontalOptions="End"/>
-                <BoxView Color="Orange" Grid.Row="2"/>
-                <Image Source="location.png" Grid.Row="2"/>
+                <Label Text="James Bond" 
+                       Grid.ColumnSpan="2" 
+                       FontSize="20" 
+                       FontAttributes="Bold" 
+                       HorizontalTextAlignment="Start" 
+                       VerticalTextAlignment="Start"/>
 
+                <Image Source="symbolmale.png" 
+                       Grid.Column="3" 
+                       HeightRequest="30" 
+                       HorizontalOptions="End" 
+                       VerticalOptions="Start"/>
+
+                <Label Text="Corgi" 
+                       TextColor="#3f3f3f" 
+                       Grid.Row="1" 
+                       Grid.ColumnSpan="2"
+                       VerticalOptions="Center"/>
+
+                <Image Source="clock.png" 
+                       Grid.Row="1" 
+                       Grid.Column="2" 
+                       HeightRequest="20" 
+                       HorizontalOptions="End" 
+                       VerticalOptions="Center"/>
+
+                <Label Text="1 Year Old" 
+                       TextColor="#3f3f3f" 
+                       Grid.Row="1" 
+                       Grid.Column="3" 
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+
+                <Image Source="location.png" 
+                       Grid.Row="2" 
+                       HeightRequest="30" 
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Center"/>
+
+                <Label Text="3B, Lorong 88, Taman Rantau Panjang, 96000 Sibu, Sarawak" 
+                       Grid.Row="2" 
+                       Grid.Column="1" 
+                       Grid.ColumnSpan="3" 
+                       HorizontalTextAlignment="Start" 
+                       VerticalTextAlignment="Center"/>
             </Grid>
         </Border>
 
-        <Button x:Name="CounterBtn"
-                Text="Adopt Now"
-                Grid.Row="4"
-                HeightRequest="10"
-                WidthRequest="100"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+        <Border Grid.Row="3" 
+                HeightRequest="200" 
+                WidthRequest="325"
+                StrokeShape="RoundRectangle 10">
 
+            <Grid RowDefinitions="*, *, *"
+                  ColumnDefinitions="*, 2*, *">
+                <Border WidthRequest="55"
+                        HeightRequest="55"
+                        StrokeShape="RoundRectangle 40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Background="white">
+
+                    <Image Source="mai.png"
+                           Aspect="AspectFill"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Border>
+
+                <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
+                    <Label Text="Mai" 
+                           FontAttributes="Bold" 
+                           HorizontalTextAlignment="Start" 
+                           VerticalTextAlignment="Center"/>
+
+                    <Label Text="Owner" 
+                           FontSize="10" 
+                           TextColor="Gray"/>
+                </VerticalStackLayout>
+
+                <Label Text="21.10.2025" 
+                       HorizontalTextAlignment="Center" 
+                       VerticalOptions="Center"
+                       Grid.Column="2"
+                       Margin="10"
+                       FontSize="12"/>
+
+                <Label Text="Hi! James is a bright-eyed Corgi that has a burst of ginger and white fluff, ready to charm the world!" 
+                       Grid.Row="1" 
+                       Grid.ColumnSpan="3" 
+                       Margin="10,0,10,0"
+                       VerticalTextAlignment="Center"/>
+
+                <Border WidthRequest="45"
+                        HeightRequest="45"
+                        Grid.Row="2"
+                        StrokeShape="RoundRectangle 40"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Background="white">
+
+                    <Button x:Name="FavouriteBtn"
+                            BackgroundColor="White"
+                            TextColor="Black"
+                            ImageSource="favorite.png"
+                            Grid.Row="2"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            CornerRadius="50"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center"
+                            SemanticProperties.Hint="Favourites the page"
+                            Clicked="OnFavouriteClicked"/>
+                </Border>
+
+                <Button x:Name="AdoptBtn"
+                        BackgroundColor="#FFC107"
+                        TextColor="Black"
+                        Text="Adopt Now"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="3"
+                        HeightRequest="40"
+                        WidthRequest="230"
+                        CornerRadius="50"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        Margin="0,0,20,0"
+                        SemanticProperties.Hint="Counts the number of times you click"
+                        Clicked="OnCounterClicked"/>
+            </Grid>
+
+        </Border>
 
     </Grid>
 
