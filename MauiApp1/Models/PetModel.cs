@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace MauiApp1.Models
 {
-    // This class represents the data for the page.
     public class PetModel
     {
         public string Name { get; set; } = "James Bond";
@@ -17,7 +16,6 @@ namespace MauiApp1.Models
         public string Location { get; set; } = "3B, Lorong 88, Taman Rantau Panjang, 96000 Sibu, Sarawak";
         public string Description { get; set; } = "Hi! James is a bright-eyed Corgi that has a burst of ginger and white fluff, ready to charm the world!";
 
-        // This property will track if the pet is officially 'adopted' in the model.
         public bool IsAdopted { get; set; } = false;
     }
 }

@@ -33,10 +33,8 @@ namespace MauiApp1.ViewModels.Pages
 
         public MainPageViewModel()
         {
-            // Create default pet
             PetDetails = new PetModel();
 
-            // Commands
             AdoptCommand = new Command(OnAdopt);
             ToggleFavouriteCommand = new Command(OnToggleFavourite);
         }
